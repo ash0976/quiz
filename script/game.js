@@ -17,7 +17,9 @@ let questions = [
     choice2: "En type datavirus",
     choice3: "En metode for å manipulere databasespørringer",
     choice4: "En form for trådløs kommunikasjon",
-    answer: 3
+    answer: 3,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hva betyr begrepet metadata",
@@ -25,7 +27,9 @@ let questions = [
     choice2: "En metode for å kryptere filer",
     choice3: "En type grafisk brukergrensesnitt",
     choice4: "En form for sosial media",
-    answer: 1
+    answer: 1,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hva står forkortelsen IKT for",
@@ -33,7 +37,9 @@ let questions = [
     choice2: "Informasjons- og kommunikasjonsteknologi",
     choice3: "Institutt for Kreativ Teknologi",
     choice4: "Interaktiv Kunst og Teknologi",
-    answer: 2
+    answer: 2,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hva står forkortelsen CPU for",
@@ -41,7 +47,9 @@ let questions = [
     choice2: "Computer Personal Unit",
     choice3: "Central Program Unit",
     choice4: "Central Peripheral Unit",
-    answer: 1
+    answer: 1,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hva er de mest brukte programmeringsspråk?",
@@ -49,7 +57,9 @@ let questions = [
     choice2: "C++",
     choice3: "Python",
     choice4: "JavaScript",
-    answer: 3
+    answer: 3,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hva er forskjellen mellom bit og byte?",
@@ -57,7 +67,9 @@ let questions = [
     choice2: "Bit er en enhet for databehandling, mens byte er en enhet for datalagring",
     choice3: "Bit er en enhet for tid, mens byte er en enhet for avstand",
     choice4: "Det er ingen forskjell mellom bit og byte",
-    answer: 1
+    answer: 1,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hvilket operativsystem er kjernen i Android-plattformen?",
@@ -65,7 +77,9 @@ let questions = [
     choice2: "Linux",
     choice3: "Windows",
     choice4: "MacOS",
-    answer: 2
+    answer: 2,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hvilken type programvare brukes til å beskytte en datamaskin mot skadelig programvare?",
@@ -73,7 +87,9 @@ let questions = [
     choice2: "Grafikkprogramvare",
     choice3: "Operativsystemprogramvare",
     choice4: "Kontorprogramvare",
-    answer: 1
+    answer: 1,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hva er en bug?",
@@ -81,7 +97,9 @@ let questions = [
     choice2: "En type insekt",
     choice3: "En programvarefunksjon",
     choice4: "En datamaskin",
-    answer: 1
+    answer: 1,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hvordan fungerer begrepet Two-Factor Authentication (2FA)",
@@ -89,7 +107,9 @@ let questions = [
     choice2: "To separate brukernavn og passord",
     choice3: "To separate datamaskiner",
     choice4: "To separate internettforbindelser",
-    answer: 1
+    answer: 1,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hva betyr HTTP 404 NOT FOUND",
@@ -97,7 +117,9 @@ let questions = [
     choice2: "En vellykket nettverksforbindelse",
     choice3: "En type datavirus",
     choice4: "En nettleserfeil",
-    answer: 1
+    answer: 1,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hva var det første programmeringsspråket?",
@@ -105,7 +127,9 @@ let questions = [
     choice2: "Python",
     choice3: "C++",
     choice4: "Java",
-    answer: 1
+    answer: 1,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hva er forskjellen mellom Wi-Fi og Ethernet når det gjelder nettverkstilkobling?",
@@ -113,7 +137,9 @@ let questions = [
     choice2: "Wi-Fi er raskere enn Ethernet",
     choice3: "Ethernet er trådløst, mens Wi-Fi bruker kabler",
     choice4: "Det er ingen forskjell mellom Wi-Fi og Ethernet",
-    answer: 1
+    answer: 1,
+    mediaType: "none",
+    mediaSource: "path"
   },
   {
     question: "Hva er cookies, og hvorfor brukes de i nettlesere?",
@@ -121,7 +147,9 @@ let questions = [
     choice2: "En type kjeks som spises mens du surfer på nettet",
     choice3: "En form for datavirus",
     choice4: "Et annet navn for nettlesere",
-    answer: 1
+    answer: 1,
+    mediaType: "none",
+    mediaSource: "path"
   }
 ];
 
@@ -142,13 +170,34 @@ getNewQuestion = () => {
     return window.location.assign("../html/end.html");
   }
 
+  document.getElementById("questionVideo").pause();
+  document.getElementById("questionAudio").pause();
+
   questionCounter++;
   progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
   progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
   const questionIndex = Math.floor(Math.random() * availableQuesions.length);
   currentQuestion = availableQuesions[questionIndex];
+
   question.innerText = currentQuestion.question;
+
+  if (currentQuestion.mediaType === "video") {
+    document.getElementById("questionVideo").style.display = "block";
+    document.getElementById("questionVideo").src = currentQuestion.mediaSource;
+    document.getElementById("questionVideo").play();
+  } else if (currentQuestion.mediaType === "audio") {
+    document.getElementById("questionAudio").style.display = "block";
+    document.getElementById("questionAudio").src = currentQuestion.mediaSource;
+    document.getElementById("questionAudio").play();
+  } else if (currentQuestion.mediaType === "image") {
+    document.getElementsById("questionImage").stype.display = "block";
+    document.getElementById("questionImage").src = currentQuestion.mediaSource;
+  } else {
+    document.getElementById("questionVideo").style.display = "none";
+    document.getElementById("questionAudio").style.display = "none";
+    document.getElementById("questionImage").style.display = "none";
+  }
 
   choices.forEach((choice) => {
     const number = choice.dataset["number"];
@@ -156,8 +205,9 @@ getNewQuestion = () => {
   });
 
   availableQuesions.splice(questionIndex, 1);
+
   acceptingAnswers = true;
-  startTimer(); // Start the timer when a new question is displayed
+  startTimer();
 };
 
 startTimer = () => {
@@ -168,17 +218,21 @@ startTimer = () => {
 
   timer = setInterval(() => {
     timeRemaining--;
+
     timerDisplay.innerText = timeRemaining;
 
     if (timeRemaining === 0) {
       stopTimer();
-      handleAnswer(false);
+      handleTimeout();
     }
   }, 1000);
 };
 
 stopTimer = () => {
   clearInterval(timer);
+};
+
+handleTimeout = () => {
   getNewQuestion();
 };
 
@@ -197,7 +251,7 @@ choices.forEach((choice) => {
     if (!acceptingAnswers) return;
 
     acceptingAnswers = false;
-    stopTimer(); // Stop the timer when the user selects an answer
+    stopTimer();
 
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];

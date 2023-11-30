@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Javascript Custom Quiz">
-  <meta name="keywords" content="Javascript, Quiz, Javascript Quiz">
-  <meta name="author" content="Kirill Kuznetsov">
+  <meta name="description" content="Quiz">
+  <meta name="keywords" content="Quiz">
   <title>Quiz</title>
   <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="css/game.css" />
@@ -18,30 +17,16 @@
     <div id="game" class="justify-center flex-column">
       <div id="hud">
         <div class="hud-item">
-
-          <!-- Question title -->
-          <p id="progressText" class="hud-prefix">
-            Question
-          </p>
-
-          <!-- Progress bar -->
+          <p id="progressText" class="hud-prefix">Question</p>
           <div id="progressBar">
             <div id="progressBarFull"></div>
           </div>
         </div>
         <div class="hud-item">
-
-          <!-- Score -->
-          <p class="hud-prefix score-prefix">
-            Score
-          </p>
-          <h1 class="hud-main-text" id="score">
-            0
-          </h1>
+          <p class="hud-prefix score-prefix">Score</p>
+          <h1 class="hud-main-text" id="score">0</h1>
         </div>
-        <div class="hud-item">¨
-          
-          <!-- Timer -->
+        <div class="hud-item">
           <p class="hud-prefix">Time</p>
           <h1 class="hud-main-text" id="timer">10</h1>
         </div>
@@ -65,6 +50,17 @@
         <p class="choice-prefix">D</p>
         <p class="choice-text" data-number="4">Choice 4</p>
       </div>
+
+      <video id="questionVideo" width="640" height="360" controls style="display:none">
+        <source src="" type="video">
+      </video>
+      
+      <audio id="questionAudio" controls style="display:none">
+        <source src="" type="audio">
+      </audio>
+
+      <img id="questionImage" width="640" height="360" style="display: none;" src="" alt="Question Image">
+      
     </div>
   </main>
   <script src="script/game.js"></script>
