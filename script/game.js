@@ -186,13 +186,16 @@ getNewQuestion = () => {
     document.getElementById("questionVideo").style.display = "block";
     document.getElementById("questionVideo").src = currentQuestion.mediaSource;
     document.getElementById("questionVideo").play();
+    document.getElementById("question").style.display = "none";
   } else if (currentQuestion.mediaType === "audio") {
     document.getElementById("questionAudio").style.display = "block";
     document.getElementById("questionAudio").src = currentQuestion.mediaSource;
     document.getElementById("questionAudio").play();
+    document.getElementById("question").style.display = "none";
   } else if (currentQuestion.mediaType === "image") {
     document.getElementsById("questionImage").stype.display = "block";
     document.getElementById("questionImage").src = currentQuestion.mediaSource;
+    document.getElementById("question").style.display = "none";
   } else {
     document.getElementById("questionVideo").style.display = "none";
     document.getElementById("questionAudio").style.display = "none";
