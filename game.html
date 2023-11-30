@@ -32,6 +32,18 @@
         </div>
       </div>
 
+      <div id="form">
+        <video id="questionVideo" width="640" height="360" controls style="display:none">
+          <source src="" type="video">
+        </video>
+        
+        <audio id="questionAudio" controls style="display:none">
+          <source src="" type="audio">
+        </audio>
+        
+        <img id="questionImage" width="640" height="360" style="display: none;" src="" alt="Question Image">
+      </div>
+
       <!-- Question and Choices -->
       <h2 id="question">What is the answer to this question?</h2>
       <div class="choice-container">
@@ -51,16 +63,6 @@
         <p class="choice-text" data-number="4">Choice 4</p>
       </div>
 
-      <video id="questionVideo" width="640" height="360" controls style="display:none">
-        <source src="" type="video">
-      </video>
-      
-      <audio id="questionAudio" controls style="display:none">
-        <source src="" type="audio">
-      </audio>
-
-      <img id="questionImage" width="640" height="360" style="display: none;" src="" alt="Question Image">
-      
     </div>
   </main>
   <script src="script/game.js"></script>
