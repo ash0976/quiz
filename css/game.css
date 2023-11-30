@@ -202,3 +202,9 @@ input {
 input::placeholder {
     color: #aaa;
 }
+
+#questionImage {
+  width: 100%;
+  height: auto;
+  max-width: 640px;
+}

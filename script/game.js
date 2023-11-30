@@ -52,14 +52,14 @@ let questions = [
     mediaSource: "path"
   },
   {
-    question: "Hva er de mest brukte programmeringsspråk?",
+    question: "Hva er dette programmeringsspråk?",
     choice1: "Java",
     choice2: "C++",
     choice3: "Python",
     choice4: "JavaScript",
     answer: 3,
-    mediaType: "none",
-    mediaSource: "path"
+    mediaType: "image",
+    mediaSource: "https://upload.wikimedia.org/wikipedia/commons/a/a4/JavaScript_code.png"
   },
   {
     question: "Hva er forskjellen mellom bit og byte?",
@@ -193,7 +193,7 @@ getNewQuestion = () => {
     document.getElementById("questionAudio").play();
     document.getElementById("question").style.display = "none";
   } else if (currentQuestion.mediaType === "image") {
-    document.getElementsById("questionImage").stype.display = "block";
+    document.getElementById("questionImage").style.display = "block";
     document.getElementById("questionImage").src = currentQuestion.mediaSource;
     document.getElementById("question").style.display = "none";
   } else {
