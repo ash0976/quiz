@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 body{
-    background-image: url("placeholder.jpg");
+    background-image: url("https://wallpapers.com/images/hd/8-bit-background-00eolrvv0ccowrjf.jpg");
 }
 
 h1{
@@ -74,4 +74,12 @@ h1{
 }
 .eightbit-btn--proceed:active {
     box-shadow: inset 4px 4px 0px 0px #e59400;
+}
+
+.menu{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
