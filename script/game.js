@@ -174,7 +174,7 @@ getNewQuestion = () => {
   document.getElementById("questionAudio").pause();
 
   questionCounter++;
-  progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+  progressText.innerText = `Spørsmål ${questionCounter}/${MAX_QUESTIONS}`;
   progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
   const questionIndex = Math.floor(Math.random() * availableQuesions.length);
@@ -200,7 +200,9 @@ getNewQuestion = () => {
     document.getElementById("questionVideo").style.display = "none";
     document.getElementById("questionAudio").style.display = "none";
     document.getElementById("questionImage").style.display = "none";
+    document.getElementById("question").style.display = "block";
   }
+
 
   choices.forEach((choice) => {
     const number = choice.dataset["number"];

@@ -8,7 +8,6 @@
   <meta name="description" content="Quiz">
   <meta name="keywords" content="Quiz">
   <title>Quiz</title>
-  <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="css/game.css" />
 </head>
 
@@ -17,35 +16,33 @@
     <div id="game" class="justify-center flex-column">
       <div id="hud">
         <div class="hud-item">
-          <p id="progressText" class="hud-prefix">Question</p>
+          <p id="progressText" class="hud-prefix">Sprøsmål</p>
           <div id="progressBar">
             <div id="progressBarFull"></div>
           </div>
         </div>
         <div class="hud-item">
-          <p class="hud-prefix score-prefix">Score</p>
+          <p class="hud-prefix score-prefix">Poeng</p>
           <h1 class="hud-main-text" id="score">0</h1>
         </div>
         <div class="hud-item">
-          <p class="hud-prefix">Time</p>
+          <p class="hud-prefix">Tid</p>
           <h1 class="hud-main-text" id="timer">10</h1>
         </div>
       </div>
 
-      <div class="center-content">
-        <div id="item">
-          <video id="questionVideo" width="640" height="360" controls style="display:none">
-              <source src="" type="video">
-          </video>
-          <audio id="questionAudio" controls style="display:none">
-              <source src="" type="audio">
-          </audio>
-          <img id="questionImage" style="display: none;" src="" alt="Question Image">
-        </div>
-      </div>      
+      <video id="questionVideo" width="640" height="360" controls style="display:none">
+        <source src="" type="video/mp4"> <!-- Specify the correct video type -->
+      </video>
+
+      <audio id="questionAudio" controls style="display:none">
+        <source src="" type="audio/mp3"> <!-- Specify the correct audio type -->
+      </audio>
+
+      <img id="questionImage" style="display: none;" src="" alt="Question Image">
 
       <!-- Question and Choices -->
-      <h2 id="question">What is the answer to this question?</h2>
+      <h2 id="question">Hva er svar til sprøsmål?</h2>
       <div class="choice-container">
         <p class="choice-prefix">A</p>
         <p class="choice-text" data-number="1">Choice 1</p>
