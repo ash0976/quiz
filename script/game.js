@@ -18,7 +18,7 @@ let questions = [
     choice3: "En metode for å manipulere databasespørringer",
     choice4: "En form for trådløs kommunikasjon",
     answer: 3,
-    mediaType: "none",
+    mediaType: "image",
     mediaSource: "path"
   },
   {
@@ -48,8 +48,8 @@ let questions = [
     choice3: "Central Program Unit",
     choice4: "Central Peripheral Unit",
     answer: 1,
-    mediaType: "none",
-    mediaSource: "path"
+    mediaType: "image",
+    mediaSource: "../image/cpu.webp"
   },
   {
     question: "Hva er dette programmeringsspråk?",
@@ -98,8 +98,8 @@ let questions = [
     choice3: "En programvarefunksjon",
     choice4: "En datamaskin",
     answer: 1,
-    mediaType: "none",
-    mediaSource: "path"
+    mediaType: "image",
+    mediaSource: "../image/fortnite.gif"
   },
   {
     question: "Hvordan fungerer begrepet Two-Factor Authentication (2FA)",
@@ -108,8 +108,8 @@ let questions = [
     choice3: "To separate datamaskiner",
     choice4: "To separate internettforbindelser",
     answer: 1,
-    mediaType: "none",
-    mediaSource: "path"
+    mediaType: "image",
+    mediaSource: "../image/2factor.gif"
   },
   {
     question: "Hva betyr HTTP 404 NOT FOUND",
@@ -118,8 +118,8 @@ let questions = [
     choice3: "En type datavirus",
     choice4: "En nettleserfeil",
     answer: 1,
-    mediaType: "none",
-    mediaSource: "path"
+    mediaType: "image",
+    mediaSource: "../image/404.png"
   },
   {
     question: "Hva var det første programmeringsspråket?",
@@ -186,16 +186,13 @@ getNewQuestion = () => {
     document.getElementById("questionVideo").style.display = "block";
     document.getElementById("questionVideo").src = currentQuestion.mediaSource;
     document.getElementById("questionVideo").play();
-    document.getElementById("question").style.display = "none";
   } else if (currentQuestion.mediaType === "audio") {
     document.getElementById("questionAudio").style.display = "block";
     document.getElementById("questionAudio").src = currentQuestion.mediaSource;
     document.getElementById("questionAudio").play();
-    document.getElementById("question").style.display = "none";
   } else if (currentQuestion.mediaType === "image") {
     document.getElementById("questionImage").style.display = "block";
     document.getElementById("questionImage").src = currentQuestion.mediaSource;
-    document.getElementById("question").style.display = "none";
   } else {
     document.getElementById("questionVideo").style.display = "none";
     document.getElementById("questionAudio").style.display = "none";
