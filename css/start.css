@@ -1,26 +1,25 @@
-
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-body{
-    background-image: url("placeholder.jpg");
-}
+:root {
+    background-image: url("../image/background.jpg");
+    font-size: 50%;
+    font-family: 'VT323', monospace;
+  }
 
 h1{
     font-family: 'VT323', monospace;
-    font-size: 50px;
+    font-size: 25px;
     color: white;
     text-align: center;
     margin-top: 200px;
-    
-
 }
 .eightbit-btn {
     background: #92cd41;
     display: inline-block;
     position: relative;
     text-align: center;
-    font-size: 30px;
-    padding: 20px;
+    font-size: 25px;
+    padding: 10px;
     font-family: 'VT323', cursive;
     text-decoration: none;
     color: white;
