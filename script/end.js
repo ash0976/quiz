@@ -23,6 +23,12 @@ saveHighScore = e => {
   highScores.push(score);
   highScores.sort((a, b) => b.score - a.score);
   highScores.splice(5);
+  confetti({
+    particleCount: 100,
+    spread: 150,
+    origin: { y: 1 },
+    colors: ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff'],
+  });
 
   localStorage.setItem("highScores", JSON.stringify(highScores));
 };
