@@ -57,9 +57,9 @@ let questions = [
     choice2: "C++",
     choice3: "Python",
     choice4: "JavaScript",
-    answer: 3,
+    answer: 4,
     mediaType: "image",
-    mediaSource: "https://upload.wikimedia.org/wikipedia/commons/a/a4/JavaScript_code.png"
+    mediaSource: "https://assets.hongkiat.com/uploads/hello-world-different-programming-languages/javascript.jpg"
   },
   {
     question: "Hva er forskjellen mellom bit og byte?",
