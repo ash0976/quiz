@@ -18,7 +18,7 @@ let questions = [
     choice3: "En metode for å manipulere databasespørringer",
     choice4: "En form for trådløs kommunikasjon",
     answer: 3,
-    mediaType: "image",
+    mediaType: "none",
     mediaSource: "path"
   },
   {
@@ -78,8 +78,8 @@ let questions = [
     choice3: "Windows",
     choice4: "MacOS",
     answer: 2,
-    mediaType: "none",
-    mediaSource: "path"
+    mediaType: "image",
+    mediaSource: "../image/android.gif"
   },
   {
     question: "Hvilken type programvare brukes til å beskytte en datamaskin mot skadelig programvare?",
@@ -138,8 +138,8 @@ let questions = [
     choice3: "Ethernet er trådløst, mens Wi-Fi bruker kabler",
     choice4: "Det er ingen forskjell mellom Wi-Fi og Ethernet",
     answer: 1,
-    mediaType: "none",
-    mediaSource: "path"
+    mediaType: "image",
+    mediaSource: "https://www.mercku.com/wp-content/uploads/2021/12/Ethernet-Vs-WiFi-Which-Is-Better-Connection-In-2020.jpeg"
   },
   {
     question: "Hva er cookies, og hvorfor brukes de i nettlesere?",
@@ -148,9 +148,149 @@ let questions = [
     choice3: "En form for datavirus",
     choice4: "Et annet navn for nettlesere",
     answer: 1,
+    mediaType: "image",
+    mediaSource: "https://uploads-ssl.webflow.com/60f022f588e6d60cf4b0b5d6/6168364002df9771c621cd65_What%20Are%20Cookies%20(2).jpg"
+  },
+  {
+    question: "Hva står HTML for?",
+    choice1: "HyperText Markup Language",
+    choice2: "High Tech Modern Language",
+    choice3: "Hyperlink and Text Management Language",
+    choice4: "Hyper Transfer Markup Language",
+    answer: 1,
     mediaType: "none",
     mediaSource: "path"
-  }
+  },
+  {
+    question: "Hva står forkortelsen RAM for?",
+    choice1: "Random Access Memory",
+    choice2: "Read-Only Memory",
+    choice3: "Running Application Memory",
+    choice4: "Real-time Access Memory",
+    answer: 1,
+    mediaType: "image",
+    mediaSource: "https://www.crucial.in/content/dam/crucial/brand-assets/visual-assets/images/custom-photo/solution-application/crucial-new-technology-ddr4-motherboard.jpg.transform/small-jpg/img.jpg"
+  },
+  {
+    question: "Hva er en QR-kode?",
+    choice1: "Quick Response-kode",
+    choice2: "Quicker Read-kode",
+    choice3: "Quality Response-kode",
+      choice4: "Quotient Reading-kode",
+      answer: 1,
+      mediaType: "none",
+      mediaSource: "path"
+    },
+    {
+      question: "Hva står VPN for?",
+      choice1: "Virtual Private Network",
+      choice2: "Very Private Network",
+      choice3: "Virtual Public Network",
+      choice4: "Virus Protection Network",
+      answer: 1,
+      mediaType: "none",
+      mediaSource: "path"
+    },
+    {
+      question: "Hva er en SSD?",
+      choice1: "Solid State Drive",
+      choice2: "Super Storage Device",
+      choice3: "Single System Drive",
+      choice4: "Static Storage Disk",
+      answer: 1,
+      mediaType: "none",
+      mediaSource: "path"
+    },
+    {
+      question: "Hva er begrepet 'Bytecode'?",
+      choice1: "En form for datavirus",
+      choice2: "En sekvens av bytes",
+      choice3: "En type programkode som er maskinuavhengig",
+      choice4: "En måleenhet for datalagring",
+      answer: 3,
+      mediaType: "none",
+      mediaSource: "path"
+    },
+    {
+      question: "Hva er en DDoS-angrep?",
+      choice1: "En type datavirus",
+      choice2: "Distributed Denial of Service-angrep",
+      choice3: "Digital Data Storage-angrep",
+      choice4: "Dramatic Display of Sound-angrep",
+      answer: 2,
+      mediaType: "none",
+      mediaSource: "path"
+    },
+    {
+      question: "Hva er forskjellen mellom HTTP og HTTPS?",
+      choice1: "HTTP er sikker, mens HTTPS er usikker",
+      choice2: "HTTP bruker kryptering, mens HTTPS ikke gjør det",
+      choice3: "HTTPS er sikker, mens HTTP er usikker",
+      choice4: "Det er ingen forskjell mellom HTTP og HTTPS",
+      answer: 3,
+      mediaType: "none",
+      mediaSource: "path"
+    },
+    {
+      question: "Hva står API for?",
+      choice1: "Application Programming Interface",
+      choice2: "Automatisk Programmerings Interface",
+      choice3: "Advanced Program Integration",
+      choice4: "Automated Program Interaction",
+      answer: 1,
+      mediaType: "none",
+      mediaSource: "path"
+    },
+    {
+      question: "Hva står DNS for?",
+      choice1: "Data Network Security",
+      choice2: "Domain Name System",
+      choice3: "Digital Network Service",
+      choice4: "Dynamic Naming Server",
+      answer: 2,
+      mediaType: "none",
+      mediaSource: "path"
+    },
+    {
+      question: "Hva er en firewall?",
+      choice1: "En mursteinvegg",
+      choice2: "En sikkerhetsbarriere for datanettverk",
+      choice3: "En type datavirus",
+      choice4: "En brannalarm",
+      answer: 2,
+      mediaType: "none",
+      mediaSource: "path"
+    },
+    {
+      question: "Hva betyr begrepet 'Open Source'?",
+      choice1: "Programvare med åpen kildekode",
+      choice2: "Lett tilgjengelig programvare",
+      choice3: "Programvare som er gratis å bruke",
+      choice4: "Lukket kildekodeprogramvare",
+      answer: 1,
+      mediaType: "none",
+      mediaSource: "path"
+    },
+    {
+      question: "Hva står HTML for?",
+      choice1: "HyperText Markup Language",
+      choice2: "High Tech Modern Language",
+      choice3: "Hyperlink and Text Management Language",
+      choice4: "Hyper Transfer Markup Language",
+      answer: 1,
+      mediaType: "none",
+      mediaSource: "path"
+    },
+    {
+      question: "Hva er en e-postvedlegg?",
+      choice1: "En melding i e-post",
+      choice2: "En fil som er knyttet til en e-postmelding",
+      choice3: "En type datavirus",
+      choice4: "En e-postsignatur",
+      answer: 2,
+      mediaType: "none",
+      mediaSource: "path"
+    },
 ];
 
 const CORRECT_TAX = 10;
