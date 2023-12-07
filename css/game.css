@@ -8,22 +8,60 @@
 
 .choice-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 0.5rem;
   width: 100%;
   font-size: 1.8rem;
-  border: 0.1rem solid rgb(86, 165, 235, 0.25);
+  border: 0.1rem solid rgb(0, 0, 0);
   color: white;
-  background-color: rgb(86, 165, 235);
+  background-color: rgb(0, 0, 0);
   padding: 0.5rem; /* Add padding for better aesthetics */
+  text-align: center;
+  position: relative;
+  border-radius: 0.5rem; /* Make the box round */
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
 }
 
 .choice-container:hover {
   cursor: pointer;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25), 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
   transform: translateY(-0.1rem);
-  transition: transform 150ms;
+  transition: all 150ms ease-in-out;
   color: white;
+  background-color: rgb(86, 185, 235);
+  animation: flicker 0.5s ease-in-out;
+  animation: pulse 0.5s ease-in-out;
+  animation: bounce 0.5s ease-in-out;
+  scale: 1.05; /* Make the button 5% larger */
 }
 
+.choice-container:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0.2rem solid rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+.choice-container:hover:before {
+  border: 0.2rem solid rgba(255, 255, 255, 0.8);
+}
+
+@keyframes flicker {
+  0% {
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25), 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25), 0 0.8rem 2.8rem 0 rgba(86, 185, 235, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25), 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  }
+}
 
 .choice-prefix {
   padding: 1.5rem 2.5rem;
