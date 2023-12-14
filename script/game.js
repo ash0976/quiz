@@ -291,6 +291,16 @@ let questions = [
       mediaType: "none",
       mediaSource: "path"
     },
+    {
+      question: "hva er mincraft codet i",
+      choice1: "c++",
+      choice2: "java",
+      choice3: "javascript",
+      choice4: "c#",
+      answer: 1,
+      mediaType: "none",
+      mediaSource: "path"
+    },
 ];
 
 const CORRECT_TAX = 10;
