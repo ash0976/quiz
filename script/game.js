@@ -297,7 +297,7 @@ let questions = [
       choice2: "java",
       choice3: "javascript",
       choice4: "c#",
-      answer: 1,
+      answer: 2,
       mediaType: "none",
       mediaSource: "path"
     },
@@ -363,7 +363,7 @@ getNewQuestion = () => {
 };
 
 startTimer = () => {
-  let timeRemaining = 10;
+  let timeRemaining = 20;
 
   const timerDisplay = document.getElementById("timer");
   timerDisplay.innerText = timeRemaining;
